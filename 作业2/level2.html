@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+		<style>
+      	/* li {
+        	color:transparent;
+        } */
+		</style>
+</head>
+<body>
+    <ul class='fq'>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+    <script>
+        var fq = document.querySelector('.fq');
+        var hz = fq.querySelectorAll('li');
+        for(var i = 0; i < hz.length; i++){
+            if(i % 2 == 0){
+                hz[i].style.backgroundColor = 'red';
+            }
+            else{
+                hz[i].style.backgroundColor = 'green';
+            }
+            hz[i].addEventListener('click', showContent, false)};
+            function showContent(e){
+                var x = e.target;
+                alert("The content is " + x.innerHTML);
+            }
+           
+    </script>
+</body>
+</html>

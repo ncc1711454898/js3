@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .zt{
+            height: 500px;
+            width: 500px;
+            background-color: yellow;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class='zt'>我是默认字体大小14px</div>
+    <button class='btn1'>主题按钮</button>
+    <button class='btn2'>字体大小</button>
+    <script>
+        var zt = document.querySelector('.zt');
+        var btn1 = document.querySelector('.btn1');
+        var btn2 = document.querySelector('.btn2');
+        var flag = 0;
+        var size = 0;
+        btn1.addEventListener('click', function(){
+           if(flag % 2 == 0){
+               zt.style.backgroundColor = 'red';
+               flag++;
+           }
+           else{
+               zt.style.backgroundColor = 'yellow';
+               flag++;
+           }
+        });
+        btn2.addEventListener('click', function(){
+            if(size % 3 == 0){
+                zt.innerHTML='我是默认字体大小14px'
+                zt.style.fontSize = '14px';
+                size++;
+            }
+            else if(size % 3 == 1){
+               zt.innerHTML='我是字体大小25px'
+               zt.style.fontSize = '25px';
+               size++;
+            }
+            else{
+               zt.innerHTML='我是字体大小50px'
+               zt.style.fontSize = '50px';
+               size++;
+            }
+        })
+    </script>
+
+</body>
+</html>
